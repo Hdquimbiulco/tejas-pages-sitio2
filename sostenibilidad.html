@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- SOSTENIBILIDAD: programa de reciclaje, puntos de acopio, ambiente y calidad. Textos y lugares de ejemplo. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sostenibilidad · Truvec</title>
+  <meta name="description" content="Reciclaje, ambiente y calidad en Truvec.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="sostenibilidad">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" style="--foto: url(/img/nuevas/recicla.webp)">
+    <ol class="migas" aria-label="Ruta"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Empresa</a></li><li aria-current="page">Sostenibilidad</li></ol>
+    <h1>Sostenibilidad</h1>
+    <p>Reciclaje de tejas, cuidado del ambiente y control de calidad.</p>
+  </div>
+</div>
+<section class="seccion" id="reciclaje">
+  <header class="cabecera"><p class="etiqueta">Recicla tu teja</p><h2 class="titulo">La teja vieja <em>vuelve a la planta.</em></h2>
+  <p class="bajada">Al cambiar el techo, las láminas usadas se entregan en un punto de acopio y se convierten en materia prima.</p></header>
+  <ol class="pasos">
+    <li style="--c: var(--pvc)" data-entra><h3>Separar</h3><p>Retirar clavos y limpiar el barro.</p></li>
+    <li style="--c: var(--pc)" data-entra><h3>Entregar</h3><p>Llevar las láminas al punto de acopio más cercano.</p></li>
+    <li style="--c: var(--pp)" data-entra><h3>Reciclar</h3><p>La planta las muele y vuelve a usarlas.</p></li>
+  </ol>
+</section>
+<!-- Imagen de reciclaje en medio de la página (public/img/nuevas/recicla1.webp) -->
+<section class="seccion gris-claro">
+  <div class="dos-columnas">
+    <img src="/img/nuevas/recicla1.webp" alt="Símbolo de reciclaje en verde" loading="lazy" data-entra>
+    <div data-entra>
+      <p class="etiqueta">Un ciclo que se cierra</p>
+      <h2 class="titulo">Del techo viejo <em>a material nuevo.</em></h2>
+      <p class="bajada">El PVC y el polipropileno se muelen y vuelven a la línea de producción. Cada lámina entregada es menos residuo en el relleno sanitario.</p>
+    </div>
+  </div>
+</section>
+<section class="seccion banda" id="acopio">
+  <header class="cabecera"><p class="etiqueta">Puntos de acopio</p><h2 class="titulo">Dónde <em>entregar.</em></h2></header>
+  <ul class="acopio">
+    <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Quito</b>Sucursal norte</span></li>
+    <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Guayaquil</b>Sucursal vía a Daule</span></li>
+    <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Cuenca</b>Sucursal parque industrial</span></li>
+    <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Ambato</b>Sucursal centro</span></li>
+  </ul>
+  <p class="nota pendiente">Puntos de ejemplo: falta la lista real.</p>
+</section>
+<section class="seccion" id="calidad">
+  <header class="cabecera"><p class="etiqueta">Ambiente y calidad</p><h2 class="titulo">Lo que <em>se cuida.</em></h2></header>
+  <div class="tarjetas">
+    <article class="tarjeta" data-entra><svg class="ico" aria-hidden="true"><use href="#i-reciclar"/></svg><h3>Material reciclable</h3><p>El PVC y el polipropileno se reprocesan.</p></article>
+    <article class="tarjeta" data-entra><svg class="ico" aria-hidden="true"><use href="#i-sello"/></svg><h3>Certificaciones</h3><p><span class="pendiente">Pendientes de la ficha técnica.</span></p></article>
+    <article class="tarjeta" data-entra><svg class="ico" aria-hidden="true"><use href="#i-escudo"/></svg><h3>Control de calidad</h3><p>Pruebas de impacto, color y medida en cada lote.</p></article>
+  </div>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/pagina.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- CONTACTO: canales, formulario (se envía por WhatsApp) y preguntas frecuentes. Lógica en src/contacto.js. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Truvec</title>
+  <meta name="description" content="Canales de atención de Truvec.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="contacto">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" style="--foto: url(/img/mosaico/pc-corredor.webp)">
+    <ol class="migas" aria-label="Ruta"><li><a href="index.html">Inicio</a></li><li aria-current="page">Contacto</li></ol>
+    <h1>Contacto</h1>
+    <p>Ventas, asesoría técnica y sugerencias.</p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="canales">
+    <a class="canal" data-wa href="#" target="_blank" rel="noopener" style="--c: var(--wa)"><svg class="ico" aria-hidden="true"><use href="#i-fono"/></svg><b>WhatsApp</b><span data-wa-texto></span></a>
+    <a class="canal" data-correo href="#"><svg class="ico" aria-hidden="true"><use href="#i-factura"/></svg><b>Correo</b><span data-correo-texto></span></a>
+    <a class="canal" href="sucursales.html" style="--c: var(--pc)"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><b>Sucursales</b><span>Ver el mapa con las direcciones</span></a>
+  </div>
+  <div class="dos-columnas" style="align-items: start">
+    <div class="texto">
+      <p class="etiqueta">Escribir</p>
+      <h2 class="titulo">¿En qué se puede <em>ayudar?</em></h2>
+      <p class="bajada">El mensaje se abre en WhatsApp, listo para enviar.</p>
+      <p class="nota pendiente">Número y correo de prueba: falta reemplazarlos por los reales.</p>
+    </div>
+    <form class="formulario" id="formContacto">
+      <label>Motivo<select name="motivo"><option>Quiero una cotización</option><option>Asesoría técnica</option><option>Registrarse en el club del instalador</option><option>Sugerencia o reclamo</option></select></label>
+      <div class="dos-campos">
+        <label>Nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Ciudad<input name="ciudad" autocomplete="address-level2"></label>
+      </div>
+      <label>Mensaje<textarea name="mensaje" required></textarea></label>
+      <button class="boton boton-wa" type="submit">Enviar por WhatsApp</button>
+      <p class="aviso" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+<section class="seccion banda" id="preguntas">
+  <header class="cabecera"><p class="etiqueta">Preguntas frecuentes</p><h2 class="titulo">Antes de <em>comprar.</em></h2></header>
+  <div class="preguntas">
+    <details><summary>¿Cuántas láminas lleva un techo?</summary><p>Depende del área, la pendiente y el traslape. La página <a href="cotizar.html">Cotizar</a> da el área de partida.</p></details>
+    <details><summary>¿Qué material conviene para un patio con luz?</summary><p>El policarbonato: cubre y deja pasar la luz natural.</p></details>
+    <details><summary>¿Hay entrega en obra?</summary><p><span class="pendiente">Pendiente de confirmar con ventas.</span></p></details>
+  </div>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/contacto.js"></script>
+</body>
+</html>

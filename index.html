@@ -1,0 +1,209 @@
+<!doctype html>
+<!-- INICIO (sitio b: café y crema, sin video scroll)
+  1. Portada: video de intro (public/video/intro.mp4) y banda de cifras
+  Colores por sección: gris azulado (portada), gris medio (lo tiene todo), gris intermedio (materiales), luego café y crema.
+  2. «Truvec lo tiene todo»: fila de íconos que lleva a cada producto
+  3. Materiales: tres tarjetas que llevan a la ficha de cada uno
+  4. Antes y después (café oscuro): obras de ejemplo
+  5. Instaladores: opiniones de ejemplo
+  6. Sucursales: el mismo mapa de sucursales.html
+  7. Llamado final a cotizar
+  8. Video final de policarbonato (se reproduce sólo mientras se ve)
+  Menú, pie y botón de WhatsApp: src/comun.js. Estilos: src/style.css. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Truvec · Techos que duran</title>
+  <meta name="description" content="Techos de PVC, policarbonato y polipropileno de Truvec, de IFT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="inicio">
+<div id="cabecera"></div>
+<main>
+<!-- 1. PORTADA: el video va sin sonido y en bucle; el texto queda encima -->
+<section class="portada gris-medio">
+  <div class="marco-video">
+    <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="/video/intro.mp4" type="video/mp4">
+    </video>
+    <p class="etiqueta" style="color: #fff">PVC · Policarbonato · Polipropileno</p>
+    <h1>Techos que <em>duran.</em></h1>
+    <p class="bajada">Láminas que no se oxidan, resisten la lluvia y el sol, y se instalan sin complicaciones.</p>
+    <div class="botones">
+      <a class="boton" href="cotizar.html">Cotizar un techo <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      <a class="boton boton-vidrio" href="productos.html">Ver productos</a>
+    </div>
+    <div class="ventajas"><span>No se oxida</span><span>Asesoría por WhatsApp</span><span>Entrega en sucursal</span></div>
+  </div>
+  <div class="respaldo">
+    <div><b data-cuenta="20" data-antes="+">+20</b><span>años fabricando techos</span></div>
+    <div><b data-cuenta="20">20</b><span>ciudades con sucursal</span></div>
+    <div><b data-cuenta="5">5</b><span>colores de teja de PVC</span></div>
+    <p class="pendiente" style="margin: 0; font-size: 14px">Cifras de ejemplo: falta confirmarlas.</p>
+  </div>
+</section>
+
+<!-- 2. TRUVEC LO TIENE TODO: cada ícono abre su producto o categoría -->
+<section class="seccion tiene-todo gris-tiene">
+  <h2>Truvec lo tiene todo</h2>
+  <ul>
+    <li><a href="producto.html?id=teja-colonial-pvc"><svg aria-hidden="true"><use href="#t-teja"/></svg>Tejas<br>de PVC</a></li>
+    <li><a href="producto.html?id=policarbonato-alveolar"><svg aria-hidden="true"><use href="#t-alveolar"/></svg>Policarbonato<br>alveolar</a></li>
+    <li><a href="productos.html#pp"><svg aria-hidden="true"><use href="#t-polipropileno"/></svg>Láminas de<br>polipropileno</a></li>
+    <li><a href="producto.html?id=cumbrera-pvc"><svg aria-hidden="true"><use href="#t-cumbrera"/></svg>Cumbreras</a></li>
+    <li><a href="productos.html"><svg aria-hidden="true"><use href="#t-mas"/></svg>Ver todo</a></li>
+  </ul>
+</section>
+
+<!-- 3. MATERIALES -->
+<section class="seccion gris-materiales" id="materiales">
+  <header class="cabecera centrada">
+    <p class="etiqueta">Materiales</p>
+    <h2 class="titulo">Un material para cada techo</h2>
+  </header>
+  <div class="materiales-rejilla">
+    <a class="material" href="producto.html?id=teja-colonial-pvc" style="--c: var(--pvc)" data-entra>
+      <figure class="material-foto"><img src="/img/material/pvc1.webp" alt="Teja de PVC color terracota" loading="lazy"></figure>
+      <span class="chip">PVC</span>
+      <h3>Teja de PVC</h3>
+      <p>No se oxida y aguanta la humedad. Colores para cada fachada.</p>
+      <span class="enlace">Ver la teja <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></span>
+    </a>
+    <a class="material" href="producto.html?id=policarbonato-alveolar" style="--c: var(--pc)" data-entra>
+      <figure class="material-foto"><img src="/img/material/pc.webp" alt="Plancha de policarbonato" loading="lazy"></figure>
+      <span class="chip">Policarbonato</span>
+      <h3>Policarbonato</h3>
+      <p>Cubre y deja pasar la luz. Para patios, garajes y pérgolas.</p>
+      <span class="enlace">Ver el policarbonato <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></span>
+    </a>
+    <a class="material" href="producto.html?id=teja-polipropileno" style="--c: var(--pp)" data-entra>
+      <figure class="material-foto"><img src="/img/material/pp.webp" alt="Teja de polipropileno" loading="lazy"></figure>
+      <span class="chip">Polipropileno</span>
+      <h3>Polipropileno</h3>
+      <p>Liviana y rendidora: más techo por menos inversión.</p>
+      <span class="enlace">Ver el polipropileno <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- 4. ANTES Y DESPUÉS (café oscuro). Obras de ejemplo: cambiar por obras reales. -->
+<section class="seccion oscura">
+  <header class="cabecera">
+    <p class="etiqueta">Obras</p>
+    <h2 class="titulo">Antes y después <em>del techo.</em></h2>
+    <p class="bajada">Ejemplos de cómo queda una obra terminada con Truvec. <span class="pendiente">Fotos de ejemplo.</span></p>
+  </header>
+  <div class="trabajos">
+    <article class="trabajo">
+      <div class="antes-despues">
+        <figure><img src="/img/nuevas/techo-en-obra.webp" alt="Estructura de madera sin cubierta" loading="lazy"><figcaption>ANTES</figcaption></figure>
+        <figure><img src="/img/mosaico/pvc-teja-roja.webp" alt="Techo terminado con teja de PVC roja" loading="lazy"><figcaption>DESPUÉS</figcaption></figure>
+      </div>
+      <span class="rotulo">Teja de PVC</span>
+      <h3>Casa de dos aguas · Quito</h3>
+      <p>Estructura de madera cubierta con teja colonial de PVC y cumbreras.</p>
+    </article>
+    <article class="trabajo">
+      <div class="antes-despues">
+        <figure><img src="/img/nuevas/estructura-madera.webp" alt="Vigas de madera de una pérgola" loading="lazy"><figcaption>ANTES</figcaption></figure>
+        <figure><img src="/img/mosaico/pc-pergola.webp" alt="Pérgola con policarbonato" loading="lazy"><figcaption>DESPUÉS</figcaption></figure>
+      </div>
+      <span class="rotulo">Policarbonato</span>
+      <h3>Pérgola de patio · Cuenca</h3>
+      <p>Policarbonato alveolar que cubre de la lluvia y deja pasar la luz.</p>
+    </article>
+    <article class="trabajo">
+      <div class="antes-despues">
+        <figure><img src="/img/nuevas/zinc-ondulado.webp" alt="Lámina de zinc ondulada" loading="lazy"><figcaption>ANTES</figcaption></figure>
+        <figure><img src="/img/mosaico/pvc-ondulada.webp" alt="Techo de PVC ondulado" loading="lazy"><figcaption>DESPUÉS</figcaption></figure>
+      </div>
+      <span class="rotulo">Cambio de techo</span>
+      <h3>Bodega · Guayaquil</h3>
+      <p>El zinc se cambió por PVC ondulado: sin óxido y con menos calor adentro.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 5. INSTALADORES: opiniones de ejemplo (antes en nosotros.html) -->
+<section class="seccion gris-claro">
+  <header class="cabecera centrada">
+    <p class="etiqueta">Instaladores</p>
+    <h2 class="titulo">Lo que cuentan quienes instalan</h2>
+    <p class="bajada">Opiniones de ejemplo: cambiar por las de instaladores reales del club.</p>
+  </header>
+  <div class="opiniones">
+    <figure class="opinion" data-entra>
+      <blockquote>«La teja de PVC es liviana y se corta fácil. Un techo de casa se termina en menos días que con fibrocemento.»</blockquote>
+      <figcaption><span class="inicial">JM</span><b>Jorge M.</b><small>Instalador · Ambato</small></figcaption>
+    </figure>
+    <figure class="opinion" data-entra>
+      <blockquote>«En la sucursal me dan la ficha técnica y me ayudan a calcular las láminas y las cumbreras. Así no sobra material.»</blockquote>
+      <figcaption><span class="inicial">LC</span><b>Lucía C.</b><small>Maestra de obra · Loja</small></figcaption>
+    </figure>
+    <figure class="opinion" data-entra>
+      <blockquote>«En la costa el zinc se oxida rápido. Con PVC los clientes ya no me llaman por goteras.»</blockquote>
+      <figcaption><span class="inicial">RP</span><b>Raúl P.</b><small>Contratista · Manta</small></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 6. SUCURSALES: el mismo mapa de sucursales.html (src/mapaSucursales.js) -->
+<section id="mapa" class="seccion mapa">
+  <header class="cabecera">
+    <p class="etiqueta">Sucursales</p>
+    <h2 class="titulo">Truvec en <em>todo el país.</em></h2>
+    <p class="bajada">Elegir una ciudad para ver su dirección y escribir por WhatsApp.</p>
+  </header>
+  <div class="mapa-rejilla">
+    <div class="mapa-lienzo">
+      <div class="mapa-mapa" role="region" aria-label="Mapa de sucursales de Truvec en Ecuador"></div>
+      <nav class="mapa-ruta" aria-label="Nivel del mapa"></nav>
+      <button type="button" class="mapa-volver" hidden>← Todo Ecuador</button>
+      <p class="mapa-estado" role="status">Cargando el mapa…</p>
+      <article class="mapa-ficha" aria-live="polite" hidden></article>
+    </div>
+    <aside class="mapa-lista" aria-label="Lista de sucursales">
+      <p class="mapa-lista-total">Sucursales</p>
+      <ul></ul>
+    </aside>
+  </div>
+  <p class="nota">Salvo Quito, las sucursales son ubicaciones de demostración. Límites: INEC 2024.</p>
+</section>
+
+<!-- 7. LLAMADO FINAL -->
+<section class="llamado banda" style="padding-top: clamp(64px, 10vh, 110px)">
+  <div class="llamado-tarjeta" style="--foto: url(/img/nuevas/bodega-laminas.webp)">
+    <div class="llamado-caja">
+      <p class="rotulo">Cotizar</p>
+      <h2>¿Cuántas láminas lleva el techo?</h2>
+      <p>El cotizador da el área y la cantidad de partida; ventas confirma precio y entrega.</p>
+    </div>
+    <div class="llamado-acciones">
+      <div class="botones">
+        <a class="boton" href="cotizar.html">Cotizar ahora</a>
+        <a class="boton boton-vidrio" href="contacto.html">Hablar con ventas</a>
+      </div>
+      <small><svg class="ico" aria-hidden="true"><use href="#i-fono"/></svg>Respuesta por WhatsApp en horario de oficina</small>
+    </div>
+  </div>
+</section>
+
+<!-- 8. VIDEO FINAL (public/video/poli1.mp4): se reproduce al verse y se detiene
+     al pasar a otra sección (src/inicio.js). -->
+<section class="seccion video-final banda">
+  <header class="cabecera centrada">
+    <p class="etiqueta">Policarbonato</p>
+    <h2 class="titulo">Luz natural bajo <em>techo.</em></h2>
+    <p class="bajada">Una pérgola de madera cubierta con policarbonato: protege la terraza de la lluvia y del sol fuerte, deja pasar la luz del día y mantiene el espacio abierto y cálido para usarlo todo el año.</p>
+  </header>
+  <video class="video-marco" src="/video/poli1.mp4" muted loop playsinline preload="metadata" aria-label="Pérgola de madera con techo de policarbonato sobre una terraza"></video>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/inicio.js"></script>
+</body>
+</html>

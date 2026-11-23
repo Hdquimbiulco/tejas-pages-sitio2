@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- COTIZAR: cotizador de láminas (tejas) y envío del pedido. Lógica en src/cotizar.js.
+     cotizar.html?material=pvc|pc|pp → abre con ese material marcado. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cotizar · Truvec</title>
+  <meta name="description" content="Cotizar láminas de techo por medidas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="cotizar">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" style="--foto: url(/img/nuevas/lamina-galvanizada.webp)">
+    <ol class="migas" aria-label="Ruta"><li><a href="index.html">Inicio</a></li><li aria-current="page">Cotizar</li></ol>
+    <h1>Cotizar</h1>
+    <p>Elegir el material y las medidas del techo. Después, ventas confirma precio y entrega.</p>
+  </div>
+</div>
+<section class="seccion">
+  <!-- COTIZADOR DE LÁMINAS -->
+  <form id="laminas" class="formulario ancho-limitado">
+    <p class="formulario-titulo">Cotizar láminas</p>
+    <div class="opciones">
+      <label class="opcion" style="--c: var(--pvc)"><input type="radio" name="material" value="pvc" data-nombre="PVC" checked><span>PVC</span></label>
+      <label class="opcion" style="--c: var(--pc)"><input type="radio" name="material" value="pc" data-nombre="Policarbonato"><span>Policarbonato</span></label>
+      <label class="opcion" style="--c: var(--pp)"><input type="radio" name="material" value="pp" data-nombre="Polipropileno"><span>Polipropileno</span></label>
+    </div>
+    <div class="medidas">
+      <label>Largo del techo (m)<input id="largo" type="number" min="0" step="0.1" value="8" inputmode="decimal"></label>
+      <label>Ancho del techo (m)<input id="ancho" type="number" min="0" step="0.1" value="6" inputmode="decimal"></label>
+      <label>Largo de lámina (m)<input id="largoLamina" type="number" min="0" step="0.1" value="6" inputmode="decimal"></label>
+    </div>
+    <output id="resultado" class="resultado" for="largo ancho largoLamina"></output>
+  </form>
+
+</section>
+
+<!-- ENVÍO DEL PEDIDO: manda lo cotizado por WhatsApp o por correo -->
+<section id="enviar" class="seccion banda">
+  <form id="contacto" class="formulario ancho-limitado">
+    <p class="formulario-titulo">Enviar el pedido</p>
+    <div class="dos-campos">
+      <label>Nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Teléfono<input name="telefono" type="tel" required autocomplete="tel"></label>
+    </div>
+    <label>Ciudad<input name="ciudad" autocomplete="address-level2"></label>
+    <div class="envio">
+      <button class="boton boton-wa" type="submit" value="wa">Enviar por WhatsApp</button>
+      <button class="boton boton-borde" type="submit" value="correo">Enviar por correo</button>
+    </div>
+    <p id="contactoAviso" class="aviso" role="status" hidden></p>
+    <dl class="datos-venta">
+      <div><dt>WhatsApp</dt><dd data-wa-texto></dd></div>
+      <div><dt>Correo</dt><dd data-correo-texto></dd></div>
+    </dl>
+    <p class="nota pendiente">Número y correo de prueba: falta reemplazarlos por los reales.</p>
+  </form>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/cotizar.js"></script>
+</body>
+</html>

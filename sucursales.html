@@ -1,0 +1,72 @@
+<!doctype html>
+<!-- SUCURSALES: el mapa de tejas2 (src/mapaSucursales.js, datos en public/geo/). Lo carga src/sucursales.js. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sucursales · Truvec</title>
+  <meta name="description" content="Mapa de sucursales de Truvec en Ecuador.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="sucursales">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" style="--foto: url(/img/teja-cerca.webp)">
+    <ol class="migas" aria-label="Ruta"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Empresa</a></li><li aria-current="page">Sucursales</li></ol>
+    <h1>Sucursales</h1>
+    <p>Elegir una ciudad en el mapa o en la lista para ver la dirección.</p>
+  </div>
+</div>
+<section id="mapa" class="seccion mapa">
+  <div class="mapa-rejilla">
+    <div class="mapa-lienzo">
+      <div class="mapa-mapa" role="region" aria-label="Mapa de sucursales de Truvec en Ecuador"></div>
+      <nav class="mapa-ruta" aria-label="Nivel del mapa"></nav>
+      <button type="button" class="mapa-volver" hidden>← Todo Ecuador</button>
+      <p class="mapa-estado" role="status">Cargando el mapa…</p>
+      <article class="mapa-ficha" aria-live="polite" hidden></article>
+    </div>
+    <aside class="mapa-lista" aria-label="Lista de sucursales">
+      <p class="mapa-lista-total">Sucursales</p>
+      <ul></ul>
+    </aside>
+  </div>
+  <p class="nota">Salvo Quito, las sucursales son ubicaciones de demostración. Límites: INEC 2024.</p>
+</section>
+<!-- PLANTAS Y OFICINAS (como en el sitio a): cada botón abre WhatsApp con la ciudad (src/sucursales.js) -->
+<section class="seccion banda contacto-rejilla" id="oficinas">
+  <div>
+    <h2 class="subtitulo">Plantas</h2>
+    <ul class="sedes">
+      <li class="sede"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><b>Quito (matriz)</b><span>Panamericana Sur S59 S/N y calle Matilde Álvarez, Guamaní</span><a href="#" class="pendiente">Teléfono pendiente</a></li>
+      <li class="sede"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><b>Planta Guayaquil</b><span class="pendiente">Dirección de ejemplo</span><a href="#" class="pendiente">Teléfono pendiente</a></li>
+    </ul>
+  </div>
+  <div class="oficinas">
+    <h2 class="subtitulo">Oficinas comerciales y distribuidores</h2>
+    <ul class="oficinas-lista">
+      <li><b>Quito</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Quito" aria-label="Escribir por WhatsApp a Quito"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Guayaquil</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Guayaquil" aria-label="Escribir por WhatsApp a Guayaquil"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Cuenca</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Cuenca" aria-label="Escribir por WhatsApp a Cuenca"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Ambato</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Ambato" aria-label="Escribir por WhatsApp a Ambato"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Ibarra</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Ibarra" aria-label="Escribir por WhatsApp a Ibarra"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Manta</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Manta" aria-label="Escribir por WhatsApp a Manta"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Portoviejo</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Portoviejo" aria-label="Escribir por WhatsApp a Portoviejo"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Santo Domingo</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Santo Domingo" aria-label="Escribir por WhatsApp a Santo Domingo"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Machala</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Machala" aria-label="Escribir por WhatsApp a Machala"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Loja</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Loja" aria-label="Escribir por WhatsApp a Loja"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Riobamba</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Riobamba" aria-label="Escribir por WhatsApp a Riobamba"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+      <li><b>Esmeraldas</b><a class="boton-wa-chico" href="#" data-wa-ciudad="Esmeraldas" aria-label="Escribir por WhatsApp a Esmeraldas"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+    </ul>
+    <p class="nota pendiente">Ciudades de ejemplo; todas usan el WhatsApp de prueba.</p>
+  </div>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/sucursales.js"></script>
+</body>
+</html>

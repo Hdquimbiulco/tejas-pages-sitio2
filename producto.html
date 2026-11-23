@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- FICHA DE PRODUCTO: una sola página para todos (producto.html?id=<id>). La llena src/producto.js con src/datos.js. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto · Truvec</title>
+  <meta name="description" content="Ficha de producto de Truvec.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="producto">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" data-encabezado>
+    <ol class="migas" aria-label="Ruta" data-migas></ol>
+    <p class="encabezado-titulo" data-categoria></p>
+  </div>
+</div>
+<section class="seccion">
+  <div class="ficha" data-ficha>
+    <figure class="ficha-foto" data-foto></figure>
+    <div>
+      <span class="chip" data-chip></span>
+      <h1 data-nombre></h1>
+      <h2>Usos</h2>
+      <div class="usos" data-usos></div>
+      <h2>Descripción</h2>
+      <ul class="lista-check" data-descripcion></ul>
+      <h2>Datos técnicos</h2>
+      <dl class="datos" data-normas></dl>
+      <p class="nota pendiente">Datos por confirmar con la ficha técnica.</p>
+      <div class="botones">
+        <a class="boton" data-cotizar href="cotizar.html">Cotizar este producto</a>
+        <a class="boton boton-wa" data-wa-producto href="#" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="seccion banda">
+  <header class="cabecera"><p class="etiqueta">De la misma categoría</p><h2 class="titulo">Otros <em>productos.</em></h2></header>
+  <div class="relacionados" data-relacionados></div>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/producto.js"></script>
+</body>
+</html>

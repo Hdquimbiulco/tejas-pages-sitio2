@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- PRODUCTOS: filtro por categoría y tarjetas. Las tarjetas las arma src/productos.js con src/datos.js; productos.html#pvc abre el filtro de esa categoría. -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos · Truvec</title>
+  <meta name="description" content="Tejas de PVC, policarbonato y polipropileno.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body data-pagina="productos">
+<div id="cabecera"></div>
+<main>
+<div class="encabezado">
+  <div class="encabezado-tarjeta" style="--foto: url(/img/mosaico/pvc-colores.webp)">
+    <ol class="migas" aria-label="Ruta"><li><a href="index.html">Inicio</a></li><li aria-current="page">Productos</li></ol>
+    <h1>Productos</h1>
+    <p>Elegir una categoría para ver sus productos. Cada tarjeta lleva a su ficha.</p>
+  </div>
+</div>
+<section class="seccion banda">
+  <div class="filtros" role="group" aria-label="Filtrar por categoría" data-filtros></div>
+  <div class="productos-rejilla" data-productos></div>
+  <p class="nota">Los productos marcados «Ejemplo» son de prueba: no están en el catálogo real.</p>
+</section>
+</main>
+<div id="pie"></div>
+<script type="module" src="/src/productos.js"></script>
+</body>
+</html>
