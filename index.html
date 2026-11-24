@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- INICIO (sitio b: café y crema, sin video scroll)
   1. Portada: video de intro (public/video/intro.mp4) y banda de cifras
-  Colores por sección: gris azulado (portada), gris medio (lo tiene todo), gris intermedio (materiales), luego café y crema.
+  Colores por sección: video a todo el ancho con banda de cifras oscura, gris (lo tiene todo), blanco (materiales e instaladores), luego café y crema.
   2. «Truvec lo tiene todo»: fila de íconos que lleva a cada producto
   3. Materiales: tres tarjetas que llevan a la ficha de cada uno
   4. Antes y después (café oscuro): obras de ejemplo
@@ -25,7 +25,7 @@
 <div id="cabecera"></div>
 <main>
 <!-- 1. PORTADA: el video va sin sonido y en bucle; el texto queda encima -->
-<section class="portada gris-medio">
+<section class="portada">
   <div class="marco-video">
     <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
       <source src="/video/intro.mp4" type="video/mp4">
@@ -40,15 +40,15 @@
     <div class="ventajas"><span>No se oxida</span><span>Asesoría por WhatsApp</span><span>Entrega en sucursal</span></div>
   </div>
   <div class="respaldo">
-    <div><b data-cuenta="20" data-antes="+">+20</b><span>años fabricando techos</span></div>
-    <div><b data-cuenta="20">20</b><span>ciudades con sucursal</span></div>
-    <div><b data-cuenta="5">5</b><span>colores de teja de PVC</span></div>
-    <p class="pendiente" style="margin: 0; font-size: 14px">Cifras de ejemplo: falta confirmarlas.</p>
+    <div><b data-cuenta="20" data-antes="+">+20</b><span>Años fabricando techos</span></div>
+    <div><b data-cuenta="20">20</b><span>Ciudades con sucursal</span></div>
+    <div><b data-cuenta="5">5</b><span>Colores de teja de PVC</span></div>
+    <p class="pendiente">Cifras de ejemplo: falta confirmarlas.</p>
   </div>
 </section>
 
 <!-- 2. TRUVEC LO TIENE TODO: cada ícono abre su producto o categoría -->
-<section class="seccion tiene-todo gris-tiene">
+<section class="seccion tiene-todo">
   <h2>Truvec lo tiene todo</h2>
   <ul>
     <li><a href="producto.html?id=teja-colonial-pvc"><svg aria-hidden="true"><use href="#t-teja"/></svg>Tejas<br>de PVC</a></li>
@@ -60,7 +60,7 @@
 </section>
 
 <!-- 3. MATERIALES -->
-<section class="seccion gris-materiales" id="materiales">
+<section class="seccion blanca" id="materiales">
   <header class="cabecera centrada">
     <p class="etiqueta">Materiales</p>
     <h2 class="titulo">Un material para cada techo</h2>
@@ -129,7 +129,7 @@
 </section>
 
 <!-- 5. INSTALADORES: opiniones de ejemplo (antes en nosotros.html) -->
-<section class="seccion gris-claro">
+<section class="seccion blanca">
   <header class="cabecera centrada">
     <p class="etiqueta">Instaladores</p>
     <h2 class="titulo">Lo que cuentan quienes instalan</h2>
@@ -175,7 +175,7 @@
 </section>
 
 <!-- 7. LLAMADO FINAL -->
-<section class="llamado banda" style="padding-top: clamp(64px, 10vh, 110px)">
+<section class="llamado">
   <div class="llamado-tarjeta" style="--foto: url(/img/nuevas/bodega-laminas.webp)">
     <div class="llamado-caja">
       <p class="rotulo">Cotizar</p>
@@ -194,7 +194,7 @@
 
 <!-- 8. VIDEO FINAL (public/video/poli1.mp4): se reproduce al verse y se detiene
      al pasar a otra sección (src/inicio.js). -->
-<section class="seccion video-final banda">
+<section class="seccion video-final">
   <header class="cabecera centrada">
     <p class="etiqueta">Policarbonato</p>
     <h2 class="titulo">Luz natural bajo <em>techo.</em></h2>
